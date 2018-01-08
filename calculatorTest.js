@@ -1,11 +1,11 @@
 describe('validating the calculator App', function () {
     beforeEach(function () {
         browser.get("http://www.way2automation.com/angularjs-protractor/calc/");
-    })
+    });
     afterEach(function () {
         browser.sleep("3000");
         console.log("after it block")
-    })
+    });
     it('validate 1+3=4', function () {
            element(by.model("first")).sendKeys("1");
            element(by.model("second")).sendKeys("3");
@@ -29,7 +29,7 @@ describe('validating the calculator App', function () {
         element(by.binding("latest")).getText().then(function (text) {
             console.log("Result is : "+text)
         })
-    })
+    });
     it('validate 7+7=14', function () {
         element(by.model("first")).sendKeys("7");
         element(by.model("second")).sendKeys("7");
